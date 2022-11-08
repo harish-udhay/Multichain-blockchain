@@ -1,0 +1,29 @@
+#libraries
+sudo apt-get install python3-tk
+pip3 install pycrypto
+
+
+# install multichain
+
+# create node
+$ multichain-util create chain1
+$ multichaind chain1 -daemon
+
+# activate command line
+$ multichain-cli chain1
+
+# Create Streams
+
+$ create stream stream1 false
+$ subscribe stream1
+$ create stream pubkey false
+$ subscribe pubkey
+$ create stream instructor false
+$ subscribe instructor
+
+# 
+
+
+clone the git repo to htdoc folder in lampp/xampp folder 
+Change the absolute path to the cloned folder (in htdocs) in code
+

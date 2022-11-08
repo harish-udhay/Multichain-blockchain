@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => '469e9be462409ecfed157726bcda9b38138600cf',
+        'name' => '__root__',
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '469e9be462409ecfed157726bcda9b38138600cf',
+            'dev_requirement' => false,
+        ),
+        'fguillot/json-rpc' => array(
+            'pretty_version' => 'v1.2.8',
+            'version' => '1.2.8.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fguillot/json-rpc',
+            'aliases' => array(),
+            'reference' => 'f1eef90bf0bb3f7779c9c8113311811ef449ece8',
+            'dev_requirement' => false,
+        ),
+        'kunstmaan/libphp-multichain' => array(
+            'pretty_version' => 'v1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../kunstmaan/libphp-multichain',
+            'aliases' => array(),
+            'reference' => '67d01a027d1db4d4ccbcab55ee8d1f4d5578e2e3',
+            'dev_requirement' => false,
+        ),
+    ),
+);
