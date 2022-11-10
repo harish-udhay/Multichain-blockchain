@@ -28,8 +28,8 @@
 	$primkey_list = array();
 	$all_prev_tx = '';
 	$tuple = '';
-
-	$client = new MultichainClient("http://127.0.0.1:8000", "multichainrpc", "ANVEmUWRZxYs3GS8GkrBtjKt14vNTtKWgSLNqETg9FY6", 3);
+	
+	$client = new MultichainClient("http://127.0.0.1:2870", "multichainrpc", "DfmhYvqEjtUUEEgKgpx3d4SFAv2bjKE2t4Se7qgU438D", 3);
 
 	if($stmt->rowCount() > 0){
 		// $address = $client->setDebug(true)->getNewAddress();
@@ -51,7 +51,7 @@
 
 		$temp_hash = hash('sha256', $all_prev_tx);
 		$calc = hash('sha256', $temp_hash . $tuple);
-
+		
 		if($calc !== $hash){
 			echo "UFO";
 			die();

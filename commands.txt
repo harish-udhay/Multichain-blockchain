@@ -2,28 +2,63 @@
 sudo apt-get install python3-tk
 pip3 install pycrypto
 
+# start apache server
+    $ sudo /opt/lampp/lampp start
+
 
 # install multichain
 
 # create node
-$ multichain-util create chain1
-$ multichaind chain1 -daemon
-
+	$ multichain-util create chain1
+	$ multichaind chain1 -daemon
+	
 # activate command line
-$ multichain-cli chain1
+	$ multichain-cli chain1
+
+# check multichain.conf file in /home/harish/.multichain/ directory for username and password 
+# for a node to paste it into check.php file
 
 # Create Streams
 
-$ create stream stream1 false
-$ subscribe stream1
-$ create stream pubkey false
-$ subscribe pubkey
-$ create stream instructor false
-$ subscribe instructor
+	$ create stream stream1 true
+	$ subscribe stream1
+	$ create stream pubkey true
+	$ subscribe pubkey
+	$ create stream instructor true
+	$ subscribe instructor
 
-# 
+# stop the blockchain node
+	$ multichain chain1 stop
+
+# install kuntsmann multichain (clone their repo and run the command on their repo)
+
+# data to insert
+	swat cs317 aa
+
+# in chain1 run these commands to publish the instructor's courses
+
+	$ publish instructor f 6373333137 
+	(InstructorID = ss and course = cs317)
+
+	$ publish instructor f 6373333837 
+	(InstructorID = ss and course = cs387)
 
 
 clone the git repo to htdoc folder in lampp/xampp folder 
 Change the absolute path to the cloned folder (in htdocs) in code
 
+
+
+#########################
+
+$client = new MultichainClient("http://127.0.0.1:2870", "multichainrpc", "DfmhYvqEjtUUEEgKgpx3d4SFAv2bjKE2t4Se7qgU438D", 3);
+
+# chain1 username and password params will be present in /home/harish/.multichain/chain1/multichain.conf
+
+The default port for url will be found in home/harish/.multichain/chain1/params.dat
+
+* @param  string $url Multichain JSON RPC url + port
+* @param  string $username Multichain JSON RPC username
+* @param  string $password Multichain JSON RPC password
+* @param  integer $timeout HTTP timeout
+     

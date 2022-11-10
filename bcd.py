@@ -195,7 +195,7 @@ class BcD(tk.Tk):
 
 		if text == "S":
 			self.uname = uid
-			self.student = stud
+			self	.student = stud
 			self.Home(stud)
 		elif text == "U":
 			self.footer.config(text='Please SignUp !', bg='red2', fg='white', relief='raised')
