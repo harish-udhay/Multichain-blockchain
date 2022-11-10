@@ -2,8 +2,13 @@
 sudo apt-get install python3-tk
 pip3 install pycrypto
 
-# start apache server
-    $ sudo /opt/lampp/lampp start
+# Install mysql client
+$ sudo apt install mysql-client-core-8.0
+
+# Connect get into the database
+$ mysql -u root -p test -h 127.0.0.1
+$ select * from test.grades;
+$ UPDATE `grades` SET `grade`='cc' WHERE  uid = 'a';
 
 
 # install multichain
