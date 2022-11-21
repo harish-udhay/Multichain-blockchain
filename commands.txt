@@ -2,6 +2,12 @@
 sudo apt-get install python3-tk
 pip3 install pycrypto
 
+# Install apache sserver
+- > https://vitux.com/ubuntu-xampp/
+
+# Start xampp sserver
+$ sudo /opt/lampp/lampp start
+
 # Install mysql client
 $ sudo apt install mysql-client-core-8.0
 
@@ -32,21 +38,25 @@ $ UPDATE `grades` SET `grade`='cc' WHERE  uid = 'a';
 	$ create stream instructor true
 	$ subscribe instructor
 
+
+# verify streams created by
+$ liststreams
+
 # stop the blockchain node
 	$ multichain chain1 stop
 
-# install kuntsmann multichain (clone their repo and run the command on their repo)
+# install kuntsmann multichain (clone their repo and run the commands listed in their github repo on their repo)
 
 # data to insert
 	swat cs317 aa
 
 # in chain1 run these commands to publish the instructor's courses
 
-	$ publish instructor f 6373333137 
-	(InstructorID = ss and course = cs317)
+	$ publish instructor i 6373333137 
+	(InstructorID = i and course = cs317)
 
-	$ publish instructor f 6373333837 
-	(InstructorID = ss and course = cs387)
+	$ publish instructor i 6373333837 
+	(InstructorID = i and course = cs387)
 
 
 clone the git repo to htdoc folder in lampp/xampp folder 
@@ -56,7 +66,7 @@ Change the absolute path to the cloned folder (in htdocs) in code
 
 #########################
 
-$client = new MultichainClient("http://127.0.0.1:2870", "multichainrpc", "DfmhYvqEjtUUEEgKgpx3d4SFAv2bjKE2t4Se7qgU438D", 3);
+$client = new MultichainClient("http://127.0.0.1:4776", "multichainrpc", "DfmhYvqEjtUUEEgKgpx3d4SFAv2bjKE2t4Se7qgU438D", 3);
 
 # chain1 username and password params will be present in /home/harish/.multichain/chain1/multichain.conf
 

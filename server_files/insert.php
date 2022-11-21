@@ -93,7 +93,6 @@
 					}
 				}
 				catch(PDOException $e){
-					echo $e;
 					echo "D" . $count;
 					die();
 				}

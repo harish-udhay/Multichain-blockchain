@@ -51,7 +51,7 @@ class BcD(tk.Tk):
 		checkStud = tk.Checkbutton(login, text='Login as Student', font='Fixedsys 8', variable=stud, onvalue=1, offvalue=0)
 		checkStud.grid(row=3, column=1, padx=(0,30), sticky="w")
 
-		loginButton = tk.Button(login, text='Login', bg='blue', fg='white', activebackground='blue3', activeforeground='white', command=lambda: self.CheckLogin(nameBox.get(), pwordBox.get(), stud.get()))
+		loginButton = tk.Button(login, text='Login', bg='blue', fg='white', activebackground='#FF5733', activeforeground='white', command=lambda: self.CheckLogin(nameBox.get(), pwordBox.get(), stud.get()))
 		loginButton.grid(row=4, column=0, columnspan=2, pady=(5,10))
 		loginButton.bind('<Return>', lambda e: self.CheckLogin(nameBox.get(), pwordBox.get(), stud.get()))
 
@@ -81,15 +81,14 @@ class BcD(tk.Tk):
 		passPh = tk.Entry(PPframe, show='*')
 		passPh.grid(row=0, column=0, sticky="w")
 
-		help_img = "R0lGODlhDAANAPZCACAgICEhISkpKTIyMj09PUJCQkZGRkpKSktLS1dXV1hYWF1dXV5eXmBgYGFhYWRkZHBwcHR0dHZ2dnd3d4SEhIWFhYeHh4qKio+Pj5GRkZKSkpmZmZubm52dnZ+fn6Ojo6ioqK2tra+vr7CwsLa2tre3t7y8vMPDw8jIyMvLy83NzdLS0tXV1dfX19jY2NnZ2eHh4eTk5OXl5enp6e7u7vHx8fLy8vPz8/X19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAAIf8LSW1hZ2VNYWdpY2sOZ2FtbWE9MC40NTQ1NDUALAAAAAAMAA0AAAeNgDg5PTIhFhYhMjw5jDkkDRIdHRMNJDo4OyILKjEgHispCyM7LQstMAQDBgImpS0XGUIlCC84BQ5CGhcNKEI8N0EkABhCKA0JLUJBQicBEDZCLQq8ykIUBzVCxQ0XGtUkH0DaGRcuCyzaFQ8+QiymOyMLKUA0Mz8pDKM5Oo8RGxwRKjXKwaPQoUSLcgQCADs="
-		img = tk.PhotoImage(data=help_img)
+		img = tk.PhotoImage(file='./assets/info.gif')
 		PPhelp = tk.Button(PPframe, image=img, command=lambda: msgbox.showinfo('Help', 'This PassPhrase will be used for generating your Private Key'))
 		PPhelp.image = img
 		PPhelp.grid(row=0, column=1, sticky="w")
 
 		PPframe.grid(row=3, column=1, padx=(0,30), sticky="w")
 
-		SignUpButton = tk.Button(signup, text='Sign Up', bg='brown', fg='white', activebackground='brown4', activeforeground='white', command=lambda: self.SignUp(SuNameBox.get(), SuPwordBox.get(), passPh.get()))
+		SignUpButton = tk.Button(signup, text='Sign Up', bg='blue', fg='white', activebackground='#FF5733', activeforeground='white', command=lambda: self.SignUp(SuNameBox.get(), SuPwordBox.get(), passPh.get()))
 		SignUpButton.grid(row=4, column=0, columnspan=2, pady=(5,10))
 		SignUpButton.bind('<Return>', lambda e: self.SignUp(SuNameBox.get(), SuPwordBox.get(), passPh.get()))
 
@@ -98,21 +97,22 @@ class BcD(tk.Tk):
 		Footer.grid(row=4, column=0, columnspan=2, sticky='ew')
 		logos = tk.Frame(Footer, bg='black')
 		logos.grid(row=0, column=0)
-		py_img = "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAIKUExURUdwTP/gSDNxpP/ZRDR5rzNvoP/RPDR4ri1roDR2qjR4rf/POv/TQDR2qv/TP+XITv/YRv/dQ//aSP/fSzRwoS1pnP/NODR4rv/NODFzqv/SPjR6sP/OOf/MNv/UQP/WQjRzpS5wqzt0nDNqlytupjR5rjR4rjR1qP/RPDd0ov/ZQTR1qP/NOP/LNTV7sjR4rP/LNv/QPf/MNzR4rzR5sDR6sP/PO//LNTR3rTR4rjR0pjR4rv/TP//TQDR0pzBvozR0pjRzpf7ZRjRyozJxpf/XQjRyo//ZRjRvoP/ZRv/XRP/WQv/XRP/bSjJqlzNsm//gSf/jS//WQjR6sP/POv7RPDR4rzV7sv/MN//ROv/LNTR3rTR6sP/OODV7s//LNjRyozV7sv/KNf/YRv/LNv/OOf/KNf/WRP/QPf/RPj10mjRyo//aR//WQ//VQv/bQP/VQitnmzRxoSxomv/lSjR4rillmzRzpP/hTP/fTo6kayhlmzNql/DeTzRypP/gT//UQf/NOP/LNjV7sv/LNf/OOf/LNv/OOv/POv/TQDR1qTR3rTR4rv/UQTR2qv/NODRun//QPP/RPv/POf/XRDR0pv/SPzRzpDRxof/WQzNtnTR0pTR1p//ZRzRyo//VQv/YRjRyov/XRTRxoP/dSzNsmzR6sf/aSP/eTv/bSjNrmf/PPP/MNjRypC6D/7MAAACJdFJOUwCACT+mnj4CZy706YmjGAQCgKml8puN+9NG99W0oXG1pCY4/iG3iKEtFB3rKN78G5GJPO3Mq/dfPHvA3v3h5HDt4BWwgoz21cH19u7MwqK4NW+U+OANcu7yN8nsnvtQahFr76X38lN9yqYr/BT95VXiWTiMRfwvtpr4DljsEdfPUJqFYkWr5O1nrM9NyAAAAj5JREFUOMt11GdXGkEUgOEbSlAwYFQCBKRE4NARJdh7TdTYK2p67733CkJQsYCJAmoAhfzHzLAscMLwft3n7Nm9e3cAslk/s6S1409F3NZGbT0DSHEW7ZZo1ONZWvrpdv9uZ6tJaHHaIrWL0mb912ajlXCj+ajGqmdlzE6kjYBOR7UAU1kTYBORVCKxZ80eEXk8XG6OWSah+Vqn02k0GtvTJg9xUOpiKkkrZbbYgjudnZO0qNeyUMdSKZVdvZTZEo4M9vUNXedjw2iYxjNMDSjzPMj8ETLPhHeDQQVWF8fJBiNkQt6SUlBJC5hDIfMsNq4WHUxZCpjDxwgh42qWg4Y27v9M1ev7d7HZWJVBUyEzrB+jzIoYuPRyrOeaqjfn1LP3KJPgQWY5NjvYbUV0D5+9Yg56vdis+K+CiDbPVW+fjB7BHUf1KAZo458Bbtq8U40MvYzH9/cPYtvh8Bp6L9r4eNBEffidbsP7ONn4xKBJmb+9klHabKOPEQplTbISGlImUvHoRZ5ZpcyVOijuwAMKVJwqzzcJbJJzfOB04yHuIVTAXLoGAHrl7UhgGSOiMdcJAAAuFHX19w/fKj+IxbAZGCtB2Wy2E7jzpszyMhgMQRllgg8+HKUy5f8IpWWUCXlPohwOx8JHEkob1wYaEO+731dJQuHdtWB6OWSmGnGSgOBy1iR+AFQTkTxr/F8NurlkNQHxFRnjXzB/S5pnSQeUoaelmTJohjOyGuJRBwKd/OaNCR5vQiz79GUy58I/v4utx9RLivoAAAAASUVORK5CYII="
-		py_logo = tk.PhotoImage(data=py_img)
+		py_logo = tk.PhotoImage(file='./assets/python.png')
 		py = tk.Label(logos, image=py_logo, font='Verdana 7 bold', bg='black')
 		py.image = py_logo
 		py.grid(row=0, column=0, sticky='e')
-		php_img = "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"
-		php_logo = tk.PhotoImage(data=php_img)
+
+		php_logo = tk.PhotoImage(file='./assets/php.png')
 		php = tk.Label(logos, image=php_logo, font='Verdana 7 bold', bg='black')
 		php.image = php_logo
 		php.grid(row=0, column=1)
-		mc_img = "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"
-		mc_logo = tk.PhotoImage(data=mc_img)
-		mc = tk.Label(logos, image=mc_logo, font='Verdana 7 bold', bg='black')
-		mc.image = mc_logo
-		mc.grid(row=0, column=2, sticky='w')
+
+		# mc_img = "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"
+		# mc_logo = tk.PhotoImage(data=mc_img)
+		# mc = tk.Label(logos, image=mc_logo, font='Verdana 7 bold', bg='black')
+		# mc.image = mc_logo
+		# mc.grid(row=0, column=2, sticky='w')
+
 		tk.Label(logos, text='Test Simulation', font='Verdana 7 bold', bg='black', fg='white', bd=0).grid(row=1, column=0, columnspan=3)
 		logos.grid_columnconfigure(0, weight=1)
 		logos.grid_columnconfigure(1, weight=1)
@@ -415,14 +415,13 @@ class BcD(tk.Tk):
 			self.footer.update_idletasks()
 			response = self.sess.post(url, data=post_data)
 			text = response.text
-			print(text)
 		except (ConnectionError, requests.exceptions.RequestException) as e:
 			self.footer.config(text='Some Error has Occurred !', bg='red2', fg='white', relief='raised')
 			return
 
 		if text == "D":
 			self.footer.config(text='Some Error has Occurred !', bg='red2', fg='white', relief='raised')
-		elif text == "S":
+		elif text.replace("\n","") == "S":
 			self.footer.config(text='Grade Updated Successfully', bg='black', fg='springGreen', relief='raised')
 			self.vG.winfo_children()[0].item(idx, values=(item[0], item[1], item[2], uG))
 		elif text == "UFO":

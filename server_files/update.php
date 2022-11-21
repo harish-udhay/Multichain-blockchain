@@ -1,7 +1,6 @@
 
 <?php
 	session_start();
-
 	if(isset($_SESSION['logged_in'])){
 		if($_SESSION['student'] === '0'){ // instructor
 			try {
