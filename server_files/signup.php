@@ -37,7 +37,7 @@
 			$stmt->bindValue(':hash', $hash);
 			
 			if($stmt->execute()){
-				$client = new MultichainClient("http://127.0.0.1:4776", "multichainrpc", "FaGcPrBVtBNMvXd8hR3GNQspV6tYmbdrG4qRjDjiykbK", 3);
+				$client = new MultichainClient("http://127.0.0.1:7718", "multichainrpc", "Bcx7e3sKyroteVnJ9t5NvCW1HojygcUyUrHXDibPQJ2Z", 3);
 				$client->publishStreamItem('pubkey', $uname, $pubkey);
 			}
 		}

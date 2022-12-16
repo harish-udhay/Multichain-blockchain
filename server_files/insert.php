@@ -23,6 +23,7 @@
 				}
 				$number += 1;
 			}
+			
 			if($check == 1){
 				$count = 0;
 
@@ -33,6 +34,7 @@
 
 				$s = "INSERT INTO grades VALUES (:uname, :course, :grade, :tid, :idfr)";
 				$stmt = $conn->prepare($s);
+				
 
 				try {
 					foreach ($json['data'] as $i) {

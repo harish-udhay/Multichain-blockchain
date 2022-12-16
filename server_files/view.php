@@ -64,13 +64,6 @@
 					// $in .= "$key,";
 					$in_params[$key] = pack('H*', $value['data']);
 					$in .= "'{$in_params[$key]}',";
-					// echo $key;
-					// echo "!!";
-					// echo $in_params[$key];
-					// echo "&&";
-					// echo $value['data'];
-					// echo "####";
-					
 				}
 				$in = rtrim($in,",");
 				$s = "SELECT grades.uid id, name, course, grade FROM grades, creds WHERE grades.uid=creds.uid AND course IN ($in) ORDER BY course asc";
