@@ -52,18 +52,18 @@ Here, three streams are created: stream1 for storing database state(transaction 
 <p></p>
 <h3>METHODS</h3>
 
-<h4>SIGNUP and LOGIN<h4>
+<h4>SIGNUP and LOGIN</h4>
 
 <p>This application is built with a Python Tkinter-based GUI. Instructors can sign up for the application and then log in. An RSA key pair is generated when they sign up. The Private Key is encrypted with the passcode entered by the instructor and saved on the person's system. The Public Key is transmitted to the server and broadcasted 
 </p>
-<h4>INSERTING QUERY<h4>
+<h4>INSERTING QUERY</h4>
 <p>An instructor can enter his students' grades in the courses he teaches. The courses taught by a specific instructor are not stored in the database, but rather appear as a transaction on an instructor stream. 
 An instructor enters a newline between each space-separated string of a student's userID, course, and grade. When a batch of grades is submitted, each line of grade is digitally signed with the instructor's PrivateKey and sent to the server. The server retrieves the instructor's public key from the public key stream and verifies the signature.
 
 The database is retrieved (ordered by txID) for each grade about to be entered, and each tuple (txID+uid+course+grade+identifier) is concatenated and a hash is obtained.
 The current grade is concatenated to this hash (uid+course+grade+identifier) and hashed again. This final hash is then sent to the stream, resulting in a transaction for that grade. It should be noted that the actual implementation is optimized to only query the database once for each group of inserts.</p>
 
-<h4>UPDATING QUERY<h4>
+<h4>UPDATING QUERY</h4>
 <p>Additionally, instructors can change a student's grade. Updates, unlike Inserts, occur one at a time. When an update is released, the entire database is retrieved and the old grade tuple is deleted. It is now hashed, the new data is concatenated and hashed again (similar to the insert query above), and the transaction is sent to the stream. The old grade and transactionID are then replaced with the new grade and transactionID.</p>
 <h3>Detecting an Insider Attack</h3>
 A check is performed before each query (SELECT, INSERT, UPDATE) issued to the database to see if the database is consistent with what is present in the Multichain stream.
