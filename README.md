@@ -147,7 +147,7 @@ Run: $ composer require kunstmaan/libphp-multichain
 <p>check multichain.conf file in /home/<user>/.multichain/<chain_name>/multichain.conf file for username and password
 for a node to paste it into check.php and signup.php file to connect to blockchain.</p>
 
-<p>$client = new MultichainClient("http://127.0.0.1: <<default-rpc-port>>", <<username>>, <<password>>, 3);</p>
+<p>$client = new MultichainClient("http://127.0.0.1:<\default-rpc-port>\", <username>, <password>, 3);</p>
 
 <p>The default json-rpc port will be present </p>
 
