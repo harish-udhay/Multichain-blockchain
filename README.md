@@ -108,7 +108,7 @@ Run: $ composer require kunstmaan/libphp-multichain
 
 <p>Once the Multichain environment is installed, We run the following commands</p>
 
-<ul>create node</ul>
+<ul># create node</ul>
 
 <li>$ multichain-util create <chain_name></li>
 <li>$ multichaind <chain_name> -daemon</li>
@@ -117,7 +117,7 @@ Run: $ composer require kunstmaan/libphp-multichain
 
 <li>$ multichain-cli <chain_name></li>
 
-<ul>Create Streams</ul>
+<ul> # Create Streams</ul>
 <li>$ create stream stream1 true</li>
 <li>$ subscribe stream1</li>
 <li>$ create stream pubkey true</li>
@@ -126,7 +126,7 @@ Run: $ composer require kunstmaan/libphp-multichain
 <li>$ subscribe instructor</li>
 
 <p></p>
-<ul>Verify streams created by</ul>
+<ul># Verify streams created by</ul>
 
 <li>$ liststreams</li>
 <p></p>
