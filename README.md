@@ -15,7 +15,7 @@ However, insider attacks are taking the lead. Once an insider threat has occurre
 
 </p>
 
-<p>In this project Apache’s XAMPP server is used to host the application on localhost and to create the database  in PHPMYADMIN of the local host. The existing framework called Multichain is used to build the  blockchain network. The project is run on an Linux environment
+<p>In this project Apache’s LAMPP server is used to host the application on localhost and to create the database  in PHPMYADMIN of the local host. The existing framework called Multichain is used to build the  blockchain network. The project is run on an Linux environment
 </p>
 
 ![Block chain diagram](images/architecture.png)
