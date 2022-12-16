@@ -132,10 +132,10 @@ Run: $ composer require kunstmaan/libphp-multichain
 <p></p>
 
 <ul>in chain1 run these commands to publish the instructor's courses</ul>
-<li>(InstructorID = i and course = cs317)</li>
+(InstructorID = i and course = cs317)
 <li>$ publish instructor i 6373333137</li>
 
-<li>(InstructorID = i and course = cs317)</li>
+(InstructorID = i and course = cs317)
 <li>$ publish instructor i 6373333837</li>
 <p></p>
 
