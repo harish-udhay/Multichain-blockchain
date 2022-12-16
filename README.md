@@ -1,5 +1,4 @@
 # Multichain-blockchain
-
  
 Contents
 Abstract	2
@@ -145,8 +144,10 @@ Conclusions
 With the wide application of blockchain, it is very important to understand the same  and minimize the threats. The key takeaway from this project was a rudimentary understanding of blockchain networks, The concepts of streams in blockchain, Importance of insider attack detection and our solution to that using multichain. 
 
 Appendix
-Project Link
+[Project Link](https://github.com/harish-udhay/Multichain-blockchain)
 Reference
+
+Note: This project was a reimplementation of [Link](https://github.com/Miraj50/Blockchain-Database)
 [1] Shubham Sharma, Rahul Gupta, Shubham Sahai Srivastava and Sandeep K. Shukla, Detecting Insider Attacks on Databases using Blockchains
 
 [2] Hu T, Xin B, Liu X, Chen T, Ding K, Zhang X. Tracking the Insider Attacker: A Blockchain Traceability System for Insider Threats. Sensors (Basel). 2020 Sep 16;20(18):5297. doi: 10.3390/s20185297. PMID: 32947915; PMCID: PMC7570583.
